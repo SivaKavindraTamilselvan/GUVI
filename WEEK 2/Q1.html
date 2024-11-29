@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive comparison between the 'document' and 'window' objects in JavaScript. Learn their roles, properties, and differences.">
+    <title>Document vs. Window Object: Understanding the Difference</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #0066cc;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #0066cc;
+            overflow-x: auto;
+        }
+        ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            border-left: 4px solid #ff9900;
+            padding: 10px;
+            margin: 15px 0;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Document vs. Window Object: Understanding the Difference</h1>
+    </header>
+    <article>
+        <p>In JavaScript, the <code>document</code> and <code>window</code> objects are core components of the browser's DOM (Document Object Model). While they are often used interchangeably by beginners, they serve distinct purposes. This blog explains the differences between these objects and their roles in web development.</p>
+
+        <h2>What is the <code>window</code> Object?</h2>
+        <p>The <code>window</code> object represents the browser's window or tab that displays a web page. It acts as the global object in the browser environment, meaning all global variables and functions are properties of the <code>window</code> object.</p>
+        <ul>
+            <li>Provides methods like <code>alert()</code>, <code>setTimeout()</code>, and <code>fetch()</code>.</li>
+            <li>Handles events such as resizing or scrolling the window.</li>
+            <li>Contains properties like <code>innerWidth</code>, <code>innerHeight</code>, and <code>localStorage</code>.</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+console.log(window.innerWidth); // Width of the browser window
+alert("Hello from the window object!");
+        </pre>
+
+        <h2>What is the <code>document</code> Object?</h2>
+        <p>The <code>document</code> object represents the HTML content loaded in the browser. It is a property of the <code>window</code> object and provides methods and properties to interact with the DOM.</p>
+        <ul>
+            <li>Allows manipulation of elements via methods like <code>getElementById()</code> or <code>querySelector()</code>.</li>
+            <li>Enables dynamic updates to the HTML structure and styles.</li>
+            <li>Contains properties like <code>title</code>, <code>URL</code>, and <code>body</code>.</li>
+        </ul>
+        <p>Example:</p>
+        <pre>
+console.log(document.title); // Logs the title of the document
+document.body.style.backgroundColor = "lightblue"; // Changes background color
+        </pre>
+
+        <h2>Key Differences Between <code>document</code> and <code>window</code></h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th><code>window</code></th>
+                    <th><code>document</code></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Representation</td>
+                    <td>The browser window or tab.</td>
+                    <td>The HTML content (DOM) loaded in the browser.</td>
+                </tr>
+                <tr>
+                    <td>Scope</td>
+                    <td>Global object for JavaScript in the browser.</td>
+                    <td>Child object of <code>window</code>.</td>
+                </tr>
+                <tr>
+                    <td>Purpose</td>
+                    <td>Manages browser-level actions and properties.</td>
+                    <td>Manages the structure and content of the web page.</td>
+                </tr>
+                <tr>
+                    <td>Examples</td>
+                    <td><code>alert()</code>, <code>setInterval()</code>, <code>localStorage</code></td>
+                    <td><code>getElementById()</code>, <code>querySelector()</code>, <code>body</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight">
+            <p><strong>Tip:</strong> Use <code>window</code> for browser-specific tasks and <code>document</code> for DOM manipulation.</p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>While the <code>window</code> and <code>document</code> objects are closely related, understanding their distinct roles is essential for effective web development. The <code>window</code> object is the global container for browser-level features, while the <code>document</code> object allows you to interact with and manipulate the HTML content.</p>
+    </article>
+</body>
+</html>
