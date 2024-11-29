@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Between Document, Window, and Screen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Difference Between Document, Window, and Screen</h1>
+    
+    <table>
+        <caption>Document, Window, and Screen in JavaScript/HTML</caption>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Window</th>
+                <th>Screen</th>
+                <th>Document</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Definition</strong></td>
+                <td>Represents the browser window that contains the web page.</td>
+                <td>Represents the physical screen of the device.</td>
+                <td>Represents the HTML document loaded in the browser.</td>
+            </tr>
+            <tr>
+                <td><strong>Purpose</strong></td>
+                <td>Interacts with the browser window (size, location, alerts, etc.).</td>
+                <td>Provides information about the screen's resolution, color depth, etc.</td>
+                <td>Manipulates the content (HTML) of the web page, including elements and structure.</td>
+            </tr>
+            <tr>
+                <td><strong>Common Uses</strong></td>
+                <td>Controlling window size, opening new windows, handling events (resize, scroll).</td>
+                <td>Detecting screen size for responsive design and accessing screen properties.</td>
+                <td>Modifying HTML elements (e.g., `document.getElementById`) and responding to user actions.</td>
+            </tr>
+            <tr>
+                <td><strong>Access</strong></td>
+                <td>Accessed globally as `window` object.</td>
+                <td>Accessed via `screen` object.</td>
+                <td>Accessed via `document` object.</td>
+            </tr>
+            <tr>
+                <td><strong>Example Code</strong></td>
+                <td>
+                    <code>window.innerWidth</code><br>
+                    <code>window.alert("Hello")</code>
+                </td>
+                <td>
+                    <code>screen.width</code><br>
+                    <code>screen.height</code>
+                </td>
+                <td>
+                    <code>document.getElementById("elementId")</code><br>
+                    <code>document.querySelector(".className")</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
