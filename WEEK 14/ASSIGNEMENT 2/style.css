@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#title {
+    text-align: center;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+.pagination-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+table th, table td {
+    text-align: center;
+}
+
+#buttons button {
+    margin: 0 5px;
+}
